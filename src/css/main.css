@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    padding: 1rem;
+
+}
+
+header nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+
+h1{
+    color: orange;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+.carrito{
+    font-weight:bolder;
+    font-size: 1.5rem;
+}
