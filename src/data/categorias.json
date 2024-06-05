@@ -1,0 +1,14 @@
+[
+    {
+        "description": "NOTEBOOKS",
+        "id": "1"
+    },
+    {
+        "description": "MONITORES",
+        "id": "2"
+    },
+    {
+        "description": "TECLADOS",
+        "id": "3"
+    }
+]

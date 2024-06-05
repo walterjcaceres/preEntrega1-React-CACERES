@@ -10,27 +10,238 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: bisque;
+    background-color: blue;
     padding: 1rem;
+    color:white
 
 }
 
-header nav ul{
-    display: flex;
-    list-style-type: none;
-    gap: 1rem;
-}
+
 
 
 h1{
     color: orange;
 }
 
-nav ul li a{
-    text-decoration: none;
+a{
+  text-decoration: none;
 }
 
 .carrito{
     font-weight:bolder;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: white;
 }
+
+.linksCategorias{
+  color: bisque;
+  margin: 1rem;
+}
+
+.carrito a{
+  color: white;
+}
+
+.itemListConteiner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.search-container{
+width: 65%;
+}
+
+.search-container form{
+    display:flex;
+    width:100%
+}
+
+
+  .search-box {
+    width: 100%;
+    margin: 0 0.5rem;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+
+  .search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+
+  .contactBar{
+    display: flex;
+    justify-content: end;
+    background-color: #007bff;
+    color: #fff;
+    
+  }
+
+  .itemContactBar{
+    margin: 0.4rem 1.4rem;
+  }
+
+  .itemContactBar h6{
+    font-weight: normal;
+  }
+
+  .carrousel{
+    height: 300px;
+    margin:1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+  }
+
+  .card{
+    margin: 1rem;
+    padding: 1rem;
+    width: 16rem;
+    border:solid 1px grey;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 0.7rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+  .card:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  .imagen{
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagen img{
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+  }
+
+  .serial{
+    color:gray;
+    text-align: center;
+    font-size: small;
+  }
+
+  .estado{
+    color: green;
+    font-size:0.6rem;
+    font-weight: bold;
+    text-align: end;
+    text-transform: uppercase;
+  }
+
+  .titulo{
+    color:#007bff;
+    font-weight: bold;
+    margin:0.5rem 0;
+    text-align: center;
+  }
+
+  .precioAnterior{
+    color: grey;
+    font-size: 0.8rem;
+    text-decoration: line-through;
+  }
+
+  .precio{
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+
+.listaCategorias{
+  margin:0.4rem;
+  width:max-content;
+  background-color: #007bff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  position:absolute;
+  left:9rem
+}
+
+.itemCategoria{
+  text-transform: uppercase;
+  color: #ccc;
+  padding:0.8rem;
+  }
+
+  .itemCategoria:hover{
+    box-shadow: 0px 2px 4px #ccc;
+  }
+
+  .active{
+    color:gold;
+    font-weight: bolder;
+  }
+
+  .detailContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    
+  }
+  .imagenDetail{
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagenDetail img{
+    width: 70%;
+  }
+
+  .tituloDetail{
+    margin:1rem;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+    
+  }
+
+  .skuDetail{
+    margin: 0 1rem;
+  }
+
+  .stockDetail{
+    margin: 1rem;
+    display: flex;
+    justify-content: end;
+    color:green
+  }
+  
+  .precioDetail{
+      margin:2rem;
+      padding: 0.5rem;
+      font-size: 2.5rem;
+      color: #007bff;
+      border: solid 1px #007bff;
+      border-radius: 0.5rem;
+      width: max-content;
+    }
+
+    
+
+ 
+
+
+ 
