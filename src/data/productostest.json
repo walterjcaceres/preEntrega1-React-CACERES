@@ -1,0 +1,60 @@
+[{
+    "title": "MONITOR ACER 24 V247Y",
+    "sku": "V247Y",
+    "id": 117942,
+    "category": "MONITORES",
+    "categoryId": 2,
+    "brand": "ACER",
+    "brandId": 42,
+    "mainImage": "https://static.nb.com.ar/i/nb_MONITOR-ACER-24-V247Y_ver_acbd8ae66a36d3387e43518d1b36392a.jpg",
+    "brandImage": "https://static.nb.com.ar/img/70b0907f583faae03680196d9bf42d42.jpg",
+    "initialB": 3,
+    "initialC": 5,
+    "stock": "Sin stock",
+    "amountInCart": 0,
+    "amountStock": 0,
+    "categoryIdUser": null,
+    "categoryDescriptionUser": null,
+    "utility": null,
+    "price": {
+        "value": 276.528,
+        "iva": 21,
+        "finalPrice": 334.59888,
+        "percepcion": null,
+        "finalPriceWithUtility": 334.59888,
+        "ncostoextra": 0
+    },
+    "warranty": "36 meses",
+    "cotizacion": 914
+},
+{
+    "title": "MONITOR BENQ LED 22 GW2283 BLACK",
+    "sku": "9H.LHLLA.TBR",
+    "id": 104917,
+    "category": "MONITORES",
+    "categoryId": 2,
+    "brand": "BENQ",
+    "brandId": 40,
+    "mainImage": "https://static.nb.com.ar/i/nb_MONITOR-BENQ-LED-22-GW2283-BLACK_ver_ae32b36a2c53662addea7a41d87788ea.png",
+    "brandImage": "https://static.nb.com.ar/img/cf12deefbc7e27e6db2481ae6b3dc227.jpg",
+    "initialB": 3,
+    "initialC": 5,
+    "stock": "Alto",
+    "amountInCart": 0,
+    "amountStock": 5,
+    "categoryIdUser": null,
+    "categoryDescriptionUser": null,
+    "utility": null,
+    "price": {
+        "value": 189.77555,
+        "iva": 21,
+        "finalPrice": 229.62841550000002,
+        "percepcion": null,
+        "finalPriceWithUtility": 229.62842,
+        "ncostoextra": 0
+    },
+    "warranty": "36 meses",
+    "cotizacion": 914
+}
+
+]

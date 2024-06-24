@@ -239,6 +239,54 @@ width: 65%;
       width: max-content;
     }
 
+    .itemCarrito{
+      margin: 0.5rem;
+      height:3.5rem;
+      border: solid 1px black;
+      border-radius: 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      
+    }
+
+    .itemCarrito img{
+      height:2.5rem;
+      width: auto;
+    }
+
+    .cantidad{
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .disminuir{
+      padding:0.5rem;
+      width: 2rem;
+      font-weight: bolder;
+      color:crimson;
+      border-bottom-left-radius: 0.8rem;
+      border-top-left-radius: 0.8rem;
+    }
+    .numeroCantidad{
+      padding:0.5rem;
+      width: 2rem;
+      text-align: center;
+      border-top:solid 2px gray;
+      border-bottom:solid 2px gray;
+    }
+    .aumentar{
+      padding:0.5rem;
+      width: 2rem;
+      font-weight: bolder;
+      color:crimson;
+      border-bottom-right-radius: 0.8rem;
+      border-top-right-radius: 0.8rem;
+    }
+
+
     
 
  

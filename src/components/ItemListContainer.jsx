@@ -1,7 +1,8 @@
 import React, { useEffect , useState} from 'react'
-import data from "../data/productos.json"
 import { Card } from './Card'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs, query ,where, addDoc} from 'firebase/firestore'
+import { db } from "../firebase/config"
 
 
 export const ItemListContainer = () => {
@@ -10,35 +11,22 @@ export const ItemListContainer = () => {
 
   let [productos, setProductos] = useState([]);
 
-  const pedirProductos = () => {
-    return new Promise ((resolve, reject) => {
-      setTimeout (() =>{
-        resolve(data);
-      
-      }, 1000)
-    }
-    )
-  }
+ 
 
   useEffect(() => {
 
-    pedirProductos()
-    .then((res)=>{
-      if (categoryId) {
-        console.log(categoryId)
-        setProductos(res.filter((prod) => prod.categoryId === parseInt(categoryId)))
-        console.log(res)
-        console.log("entro en el filtro")
-      } else {
-        setProductos(res) 
-        console.log(" NO entro en el filtro")
-      }
-      
-    })
+    const productosRef = collection(db, "productos");
+    const q = categoryId?query(productosRef, where("category", "==" , categoryId.toUpperCase())):productosRef;
 
-  }, [categoryId]);
+    
+    getDocs(q)
+      .then((res)=>{
+        setProductos(res.docs.map((doc)=>{
+          return {...doc.data(), id:doc.id}
+        }))
+      })
 
-
+    }, [categoryId]);
 
   
   return (
@@ -46,6 +34,7 @@ export const ItemListContainer = () => {
       {
         productos.length > 0? productos.map(producto=>{
           return <Card key={producto.id} producto={producto} />
+            
         })
         : <p>Cargando...</p>
 
