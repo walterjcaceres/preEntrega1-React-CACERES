@@ -17,7 +17,7 @@ export const Card = ({producto}) => {
         <Link to={`/item/${producto.id}`}><p className='titulo'>{producto.title}</p></Link>  
         <p className="precioAnterior">${(producto.price.finalPrice*2).toFixed(2)}</p>
         <p className="precio">${(producto.price.finalPrice).toFixed(2)}</p>
-        <button onClick={()=>agregarAlCarrito(producto)}>Agregar al carrito</button>
+        <button className='btnVerde' onClick={()=>agregarAlCarrito(producto)}>Agregar al carrito</button>
     </div>
 
   )

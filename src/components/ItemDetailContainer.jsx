@@ -19,23 +19,31 @@ export const ItemDetailContainer = () => {
       const docRef = doc(db, "productos" , itemId)
        getDoc(docRef)
        .then((res)=>{
-        setProducto({...res.data(), id: res.id});
+        console.log(!res.exists())
+        if (!res.exists()) {
+          setProducto("inexistente")
+          } else {
+            setProducto({...res.data(), id: res.id});
+          }
       
        })
         
     },[itemId])
 
   return (
-    producto?
+    producto?producto!=="inexistente"?
     <div className='detailContainer'>
         <div className='imagenDetail'>{<img src={producto.mainImage} alt="" />}</div> 
         <div>
             <div className='tituloDetail'>{producto.title}</div>
             <div className='skuDetail'>{producto.sku}</div>
             <div className='stockDetail'>{producto.stock}</div>
+            <div className='descripcionDetail'>{producto.descripcion}</div>
             <div className='precioDetail'>${(producto.price.finalPrice).toFixed(2)}</div>
-            <button onClick={()=>agregarAlCarrito(producto)}>Agregar al carrito</button>
+            <button className='btnVerde' onClick={()=>agregarAlCarrito(producto)}>Agregar al carrito</button>
         </div>
-    </div>:"Cargando..."
+    </div>:<p className='error'>Producto no encontrado 😣</p>
+    
+    :<p>Cargando...</p>
   )
 }

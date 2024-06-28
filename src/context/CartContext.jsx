@@ -1,10 +1,14 @@
-import {createContext, useState} from 'react'
+import {createContext, useEffect, useState} from 'react'
 
 export const CartContext = createContext();
 
+let carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
+
 export const CartProvider = ({children}) => {
 
-    const [ carrito, setCarrito] = useState([]);
+    const [ carrito, setCarrito] = useState(carritoInicial);
+
+    const [ claseListaCategoria, SetClaseListaCategoria] = useState("listaCategorias show")
 
     
 
@@ -20,21 +24,34 @@ export const CartProvider = ({children}) => {
         if(productoExistente>-1){
             
             carrito[productoExistente].amountInCart++;
+            setCarrito([...carrito]);
+            
         } else{
             
             producto.amountInCart=1;
             setCarrito([...carrito,producto]);
         }
-        
     
     }
+
+   const totalCarrito = () => {
+    let total=0;
+    carrito.map((prod)=>{
+        total=total+prod.amountInCart*prod.price.finalPrice;
+    })
+    return total.toFixed(2);
+   }
 
    const vaciarCarrito = () => {
     setCarrito([]);
    }
 
    const cantidadCarrito = () => {
-    return carrito.length
+    let acumulador = 0;
+     carrito.map((prod)=>{
+        acumulador=acumulador+prod.amountInCart;
+    })
+    return acumulador;
     }
 
     const aumentar = (producto) => {
@@ -45,8 +62,6 @@ export const CartProvider = ({children}) => {
         }
         return (prod)
         })
-        
-        
        setCarrito(carritoNuevo);
         
     }
@@ -77,6 +92,18 @@ export const CartProvider = ({children}) => {
         setCarrito(carritoNuevo);
     }
 
+    useEffect(()=>{
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+    },[carrito])
+
+    const mostrar = () => {
+        SetClaseListaCategoria("listaCategorias");
+    }
+
+    const noMostrar = () => {
+        SetClaseListaCategoria("listaCategorias show");
+    }
+    
     
 
 
@@ -85,7 +112,7 @@ export const CartProvider = ({children}) => {
 
 
   return (
-    <CartContext.Provider value={{carrito,setCarrito,agregarAlCarrito,vaciarCarrito,cantidadCarrito,disminuir,aumentar,eliminar}}>
+    <CartContext.Provider value={{carrito,setCarrito,agregarAlCarrito,vaciarCarrito,cantidadCarrito,disminuir,aumentar,eliminar,totalCarrito,mostrar,noMostrar,claseListaCategoria}}>
         {children}
     </CartContext.Provider>
   )

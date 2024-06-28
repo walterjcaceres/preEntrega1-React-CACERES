@@ -12,7 +12,9 @@ header{
     align-items: center;
     background-color: blue;
     padding: 1rem;
-    color:white
+    color:white;
+    position: sticky;
+    top:0;
 
 }
 
@@ -28,10 +30,19 @@ a{
 }
 
 .carrito{
+
+    padding: 0.5rem;
+    width: 4rem;
     font-weight:bolder;
-    font-size: 1rem;
-    color: white;
-}
+    font-size: 1.2rem;
+    color: blue;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
 
 .linksCategorias{
   color: bisque;
@@ -107,6 +118,7 @@ width: 65%;
     justify-content: center;
     align-items: center;
     border: solid 1px;
+    display:none;
   }
 
   .card{
@@ -176,7 +188,12 @@ width: 65%;
   padding: 0.5rem;
   border-radius: 0.3rem;
   position:absolute;
+  top:70px;
   left:9rem
+}
+
+.show{
+  display:none;
 }
 
 .itemCategoria{
@@ -189,9 +206,25 @@ width: 65%;
     box-shadow: 0px 2px 4px #ccc;
   }
 
+  .btnVerde{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: lightgreen;
+    color: green;
+    cursor: pointer;
+  }
+
+  .btnCategorias{
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 1rem;
+    background-color:#007bff;
+    color:white;
+  }
+
   .active{
-    color:gold;
-    font-weight: bolder;
+    color:white;
   }
 
   .detailContainer{
@@ -203,6 +236,15 @@ width: 65%;
   .imagenDetail{
     display: flex;
     justify-content: center;
+  }
+
+  .imagenDetail img{
+    object-fit: contain;
+  }
+
+
+  .descripcionDetail{
+    padding-right: 3rem;
   }
 
   .imagenDetail img{
@@ -286,8 +328,78 @@ width: 65%;
       border-top-right-radius: 0.8rem;
     }
 
+    .fraccionDetalle{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      
+    }
 
-    
+    .recuadroDetalle{
+      margin:1rem 1rem 0 1rem;
+      padding: 1rem;
+      background-color:#EEEEEE;
+      height: min-content;
+    }
+
+    .itemDetalle{
+      padding: 0.5rem;
+      font-style: italic;
+      color: gray;
+      font-size:0.8rem ;
+
+    }
+
+    .total{
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .finalizarCompra{
+      margin: 0 1rem 1rem 1rem;
+      padding: 1rem;
+      text-align: center;
+      background-color:#EEEEEE;
+    }
+
+    .vaciarCarrito{
+      padding: 0.5rem;
+      border-radius: 1rem;
+      border: none;
+      background-color: pink;
+      color: red;
+      cursor:pointer;
+    }
+
+    .formulario{
+      margin:1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .formulario input{
+      margin:1rem;
+      padding: 1rem;
+      border-radius: 2rem;
+      border:none;
+      background-color: #EEEEEE;
+      width: 100%;
+    }
+
+    .formulario button{
+      padding: 1rem;
+      margin:1rem;
+      border-radius: 2rem;
+
+    }
+
+    .error{
+      margin: 3rem;
+      font-style: italic;
+      text-align: center;
+      font-size: 2rem;
+    }
 
  
 
