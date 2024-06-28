@@ -39,7 +39,7 @@ export const CheckOut = () => {
         return(
             <>
                <h4>Muchas gracias por su compra</h4>
-               <p>Su codigo de referencia para el seguimiento de envío es es: {docId}</p>
+               <p>Su codigo de referencia para el seguimiento de envío es: {docId}</p>
                <Link to='/'><p className='titulo'>Ir a inicio</p></Link> 
             </>
         )  

@@ -24,7 +24,6 @@ function App(){
           <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
           <Route path="/carrito" element={<PaginaCarrito/>}/>
           <Route path="/finalizar-compra" element={<CheckOut/>}/>
-          <Route path="/item/*" element={<NotFound/> }/>
           <Route path="/*" element={<NotFound/> }/>
         </Routes>
         
